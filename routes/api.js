@@ -28,8 +28,8 @@ router.put('/api/workouts/:id', (req, res) => {
   Workout.findByIdAndUpdate(
     req.params.id, //where _id =100 //which record u wnat to update 
     { $push: { exercises: req.body } },
-    { new: true, runValidators: true } //ensuring all the input are in valid formaat to store in the db 
-  ) //what u want to update for instaance all the columns within aa table 
+    { new: true, runValidators: true } //ensuring all the input are in valid format to store in the db 
+  ) //what u want to update for instance all the columns within aa table 
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
@@ -40,7 +40,7 @@ router.put('/api/workouts/:id', (req, res) => {
 
 //Adding a new item to the workout table 
 router.post('/api/workouts', (req, res) => {
-  //equivalent to your INSERT statement of MYSQL 
+  //equivalent to an INSERT statement of MYSQL 
   Workout.create({})
     .then(dbWorkout => {
       res.json(dbWorkout);

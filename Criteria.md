@@ -17,12 +17,21 @@ Rather than object-relational mapping, we will implement object-_document_ mappi
 ## Comprehension Check
 You will be employer-ready if you can answer the following questions:
 1. What is the difference between SQL and NoSQL?
+##### SQL is an integer/number base database. 
+##### NoSQL generall is beneficial for a db that contains more text/characters than numbers.
+
 2. What is object-document mapping? 
+##### Mapping to a Document.
 3. What is the equivalent of Sequelize associations in Mongoose.js? 
+##### Populate
 
 ## Learning Objectives
 You will be employer-competitive if you are able to:
 * Explain the difference between SQL and NoSQL
+###### The choice between SQL and NoSQL depends entirely on individual circumstances as both of them have advantages as well as disadvantages. SQL databases are long established with fixed schema design and a set structure. They are ideal for applications that require multi-row transactions such as an accounting system or for legacy systems that were built for a relational structure.
+
+##### On the other hand, NoSQL databases are easily scalable, flexible and simple to use as they have no rigid schema. They are ideal for applications with no specific schema definitions such as content management systems, big data applications, real-time analytics, etc.
+
 * Configure Heroku for deployment of a Node.js application using MongoDB
 * Explain and execute CRUD methods with MongoDB, using both the  and Mongoose.js
 * Use both a GUI and the Mongo command prompt to interface with a database

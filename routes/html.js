@@ -11,7 +11,7 @@ router.get("/stats", (req, res) => {
 
 });
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
 
 });
