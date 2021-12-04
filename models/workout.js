@@ -46,6 +46,8 @@ const workoutSchema = new Schema({
 
 
 
+
+
 // type: 'resistance',
 // name: 'Bicep Curl',
 // duration: 20,
@@ -56,4 +58,4 @@ const workoutSchema = new Schema({
 
 const Workout = mongoose.model("workout", workoutSchema);
 
-module.exports = Workout;
+// module.exports = Workout;

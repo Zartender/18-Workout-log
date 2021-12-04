@@ -2,6 +2,9 @@ const router = require("express").Router();
 const Workout = require('../models/workout');
 
 //getLastWorkout 
+
+
+
 router.get('/api/workouts', (req, res) => {
 
   Workout.aggregate([
@@ -23,13 +26,11 @@ router.get('/api/workouts', (req, res) => {
 
 //Updating an existing record from the table. 
 router.put('/api/workouts/:id', (req, res) => {
-
-  //equivalent to an UPDATE statement in mYSQL 
   Workout.findByIdAndUpdate(
-    req.params.id, //where _id =100 //which record u wnat to update 
+    req.params.id,
     { $push: { exercises: req.body } },
-    { new: true, runValidators: true } //ensuring all the input are in valid format to store in the db 
-  ) //what u want to update for instance all the columns within aa table 
+    { new: true, runValidators: true }
+  )
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
@@ -52,7 +53,7 @@ router.post('/api/workouts', (req, res) => {
 
 router.get('/api/workouts/range', (req, res) => {
   //SELECT * from tablename 
-  Workout.find()
+  Workout.find({})
     .sort({ _id: -1 }) //descending -1 
     .limit(7) //top 7 records only from the sorted pile 
     .then(dbWorkout => {

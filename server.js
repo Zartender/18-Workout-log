@@ -1,15 +1,16 @@
 const express = require("express");
-// creating an object for mongoose
 const mongoose = require("mongoose");
-// commiunicates the api routes
-const routesAPI = require("./routes/api")
-// communicates the routes for the html
-const routesHTML = require("./routes/html")
+
+const morgan = require("morgan");
+
+
 const uri = process.env.MONGODB_URI;
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+app.use(morgan("dev"));
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
