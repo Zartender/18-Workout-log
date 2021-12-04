@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const routesAPI = require("./routes/api")
+const routesHTML = require("./routes/html")
 const uri = process.env.MONGODB_URI;
 
 const PORT = process.env.PORT || 3000;
