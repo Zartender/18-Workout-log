@@ -1,6 +1,9 @@
 const express = require("express");
+// creating an object for mongoose
 const mongoose = require("mongoose");
+// commiunicates the api routes
 const routesAPI = require("./routes/api")
+// communicates the routes for the html
 const routesHTML = require("./routes/html")
 const uri = process.env.MONGODB_URI;
 
@@ -10,12 +13,11 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 app.use(express.static("public"));
 
 mongoose.connect(uri || "mongodb://localhost/workoutdb", {
   useNewUrlParser: true,
-  // useFindAndModify: false
+  useFindAndModify: false
 });
 
 // routes

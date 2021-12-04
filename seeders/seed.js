@@ -4,9 +4,9 @@ const Workout = require('../models/workout');
 mongoose.connect('mongodb://localhost/workoutdb', {
   useNewUrlParser: true,
   useFindAndModify: false,
-  useUnifiedTopology: true,
+  // useUnifiedTopology: true,
 });
-
+// Added Seed data
 const workoutSeed = [
   {
     day: new Date(new Date().setDate(new Date().getDate() - 9)),
@@ -63,11 +63,11 @@ const workoutSeed = [
     exercises: [
       {
         type: 'resistance',
-        name: 'Bench Press',
-        duration: 20,
-        weight: 285,
+        name: 'Good Mornings',
+        // duration: 60,
+        weight: 85,
         reps: 10,
-        sets: 4,
+        sets: 5,
       },
     ],
   },
@@ -76,11 +76,11 @@ const workoutSeed = [
     exercises: [
       {
         type: 'resistance',
-        name: 'Bench Press',
-        duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4,
+        name: 'Dead Lift',
+        // duration: 60,
+        weight: 185,
+        reps: 15,
+        sets: 10,
       },
     ],
   },
@@ -90,10 +90,10 @@ const workoutSeed = [
       {
         type: 'resistance',
         name: 'Quad Press',
-        duration: 30,
-        weight: 300,
-        reps: 10,
-        sets: 4,
+        // duration: 30,
+        weight: 450,
+        reps: 8,
+        sets: 6,
       },
     ],
   },
@@ -103,10 +103,10 @@ const workoutSeed = [
       {
         type: 'resistance',
         name: 'Bench Press',
-        duration: 20,
-        weight: 300,
+        // duration: 20,
+        weight: 225,
         reps: 10,
-        sets: 4,
+        sets: 7,
       },
     ],
   },
@@ -116,14 +116,41 @@ const workoutSeed = [
       {
         type: 'resistance',
         name: 'Military Press',
-        duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4,
+        duration: 60,
+        weight: 75,
+        reps: 8,
+        sets: 10
       },
     ],
   },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() - 1)),
+    exercises: [
+      {
+        type: 'resistance',
+        name: 'Arnold Press',
+        duration: 20,
+        weight: 60,
+        reps: 15,
+        sets: 5
+      },
+    ],
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() - 1)),
+    exercises: [
+      {
+        type: 'resistance',
+        name: 'Ketel Bell Swings',
+        duration: 120,
+        weight: 45,
+        reps: 80,
+        sets: 10
+      }
+    ]
+  }
 ];
+
 
 Workout.deleteMany({})
   .then(() => Workout.collection.insertMany(workoutSeed))
