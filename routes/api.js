@@ -42,13 +42,7 @@ router.put('/api/workouts/:id', (req, res) => {
 //Adding a new item to the workout table 
 router.post('/api/workouts', (req, res) => {
   //equivalent to an INSERT statement of MYSQL 
-  Workout.create({})
-    .then(dbWorkout => {
-      res.json(dbWorkout);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
+  Workco
 });
 
 router.get('/api/workouts/range', (req, res) => {
