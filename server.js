@@ -18,6 +18,8 @@ app.use(express.static("public"));
 
 mongoose.connect(uri || "mongodb://localhost/workoutdb", {
   useNewUrlParser: true,
+  useFindAndModify: true,
+  useCreateIndex: true,
   useFindAndModify: false
 });
 
