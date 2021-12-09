@@ -25,12 +25,16 @@ The user should be able to:
 
 
 ## Links GitHub & Heroku Deployed Site
+
   * [GithubURL](https://github.com/Zartender/18-Workout-log)
   * [Heroku-Deployed-Site](https://tempo-workout.herokuapp.com/exercise?id=61aaf3bd9c199457680c3c2e)
 
-## 
+## Youtube Video
+
+[Watch](https://youtu.be/iRUJRPIt6SA)
 
 ## Contributors 
+
 * [Ian Greenblott](https://www.linkedin.com/in/greenblott/)
 
 ## Screenshots
